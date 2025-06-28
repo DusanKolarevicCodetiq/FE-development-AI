@@ -51,7 +51,7 @@ class CountryDashboard extends React.Component {
     const filtered = this.filterCountries();
 
     return (
-      <ul style={{ padding: 0 }}>
+      <ul style={{ padding: 0, flex: 1, overflowY: "auto" }}>
         {filtered.map((country) => (
           <li
             key={country.cca3}
@@ -83,7 +83,7 @@ class CountryDashboard extends React.Component {
     const { loading, error, selectedRegion, searchTerm } = this.state;
 
     return (
-      <div style={{ padding: 20 }}>
+      <div style={{ padding: 20, display: "flex", flexDirection: "column" }}>
         <h2>Country Dashboard</h2>
 
         {loading && <p>Loading...</p>}
