@@ -38,7 +38,7 @@ const CountryList = () => {
   }, [countries, region, search]);
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <h2>Country List</h2>
 
       <select onChange={(e) => setRegion(e.target.value)}>
@@ -59,7 +59,7 @@ const CountryList = () => {
 
       {loading && <p>Loading...</p>}
 
-      <ul>
+      <ul style={{ flex: 1, overflowY: "auto" }}>
         {filteredCountries.map((country) => (
           <li key={country.name.common}>
             <img src={country.flags.svg} width={24} />
