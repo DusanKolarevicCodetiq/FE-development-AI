@@ -1,19 +1,21 @@
-import styled from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-
-export const FullScreenContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* center horizontally only */
-  background-color: #f5f7fa;
-  overflow: hidden;
-`;
+import { CountryTabs } from "./components/CountryTabs";
+import {
+  FullScreenContainer,
+  Header,
+  Title,
+  Subtitle,
+} from "./App.styles";
 
 function App() {
   return (
     <FullScreenContainer>
       <GlobalStyle />
+      <Header>
+        <Title>Countries of the World</Title>
+        <Subtitle>Fetched using RTK Query from REST Countries API</Subtitle>
+      </Header>
+       <CountryTabs /> 
     </FullScreenContainer>
   );
 }
