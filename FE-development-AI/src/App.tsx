@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
+import { CountryTabs } from "./components/CountryTabs";
 
 export const FullScreenContainer = styled.div`
   width: 100vw;
@@ -14,6 +15,7 @@ function App() {
   return (
     <FullScreenContainer>
       <GlobalStyle />
+      <CountryTabs />
     </FullScreenContainer>
   );
 }
