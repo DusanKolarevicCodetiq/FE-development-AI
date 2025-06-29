@@ -1,19 +1,29 @@
-import styled from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-
-export const FullScreenContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* center horizontally only */
-  background-color: #f5f7fa;
-  overflow: hidden;
-`;
+import { CountryTabs } from "./components/CountryTabs/CountryTabs";
+import { 
+  FullScreenContainer, 
+  Header, 
+  HeaderContent,
+  Title, 
+  MainContent 
+} from "./App.styles";
+import RefactoredCountryDashboard from "./legacy/RefactoredCountryDashboard";
+import RefactoredCountryList from "./flawed/RefactoredCountryList";
+import Chart from "./figma/Chart/Chart";
 
 function App() {
   return (
     <FullScreenContainer>
       <GlobalStyle />
+      <Header>
+        <HeaderContent>
+          <Title>Countries Explorer</Title>
+        </HeaderContent>
+      </Header>
+      <MainContent>
+        {/* <CountryTabs /> */}
+        <Chart />
+      </MainContent>
     </FullScreenContainer>
   );
 }
